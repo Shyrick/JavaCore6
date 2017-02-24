@@ -1,4 +1,6 @@
-package modul3;
+package modul3_1.Task3_1;
+
+import modul3_1.Task3_1.Bird;
 
 public class MainBird {
 

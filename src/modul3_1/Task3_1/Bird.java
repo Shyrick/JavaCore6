@@ -1,4 +1,4 @@
-package modul3;
+package modul3_1.Task3_1;
 
 public class Bird {
 
