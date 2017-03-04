@@ -1,7 +1,5 @@
 package modul4;
 
-import java.util.Currency;
-
 public class EUBank extends Bank {
 
     public EUBank(Long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {

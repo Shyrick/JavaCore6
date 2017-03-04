@@ -1,7 +1,5 @@
 package modul4;
 
-import java.util.Currency;
-
 public abstract class Bank {
 
     private Long id;
