@@ -22,7 +22,8 @@ public class User {
 
     @Override
     public String toString() {
-        return super.toString();
+       String s = getName()+ "'s balance is   " + getBalance() + " " + getBank().getCurrency();
+        return s;
     }
 
     public long getId() {
