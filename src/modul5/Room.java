@@ -41,6 +41,12 @@ public class Room {
         return result;
     }
 
+    @Override
+    public String toString() {
+        return "id - " + getId() +
+                "  price - " + getPrice() + "  persons - " + getPersons() + "  sity - " + getCityName() + "  hotel - " + getHotelName();
+    }
+
     public long getId() {
         return id;
     }
