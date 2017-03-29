@@ -4,14 +4,7 @@ import java.util.Date;
 
 public class GoogleAPI implements API {
 
-    Room room1 = new Room(1, 100, 2, new Date(117, 3, 01), "Motel", "Krakov");
-    Room room2 = new Room(2, 150, 1, new Date(117, 3, 11), "Hilton", "Krakov");
-    Room room3 = new Room(3, 200, 3, new Date(117, 3, 12), "Inturist", "Gdansk");
-    Room room4 = new Room(4, 250, 4, new Date(117, 4, 03), "Marriott", "Lviv");
-    Room room5 = new Room(5, 200, 2, new Date(117, 4, 18), "Hotel", "Kiev");
-
-    Room rooms[] = new Room[]{room1, room2, room3, room4, room5};
-
+    Room [] rooms = new Room [5];
 
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
@@ -36,5 +29,14 @@ public class GoogleAPI implements API {
         }
         return foundedRooms;
 
+    }
+    public void showFoundedRooms (Room room []){
+        if (room.length != 0) {
+            for (Room rrr : room) {
+                System.out.println(rrr);
+            }
+        }
+        else {System.out.println("В GoogleAPI такая комната не найдена");
+        }
     }
 }

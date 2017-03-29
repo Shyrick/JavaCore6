@@ -4,9 +4,12 @@ public class Mainroom {
 
     public static void main(String[] args) {
 
-        BookingComAPI a  = new BookingComAPI();
+        BookingComAPI bookingComAPI  = new BookingComAPI();
+        GoogleAPI googleAPI = new GoogleAPI();
 
-        a.showFoundedRooms(a.findRooms( 100, 3 , "LA", "Hilton"));
+        bookingComAPI.showFoundedRooms(bookingComAPI.findRooms( 100, 3 , "LA", "Hilton"));
+        googleAPI.showFoundedRooms(googleAPI.findRooms(100, 3 , "LA", "Hilton"));
+
 
 
     }

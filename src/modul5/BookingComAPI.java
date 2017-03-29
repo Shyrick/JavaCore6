@@ -4,14 +4,8 @@ import java.util.Date;
 
 public class BookingComAPI implements API {
 
-    Room room1 = new Room(1, 100, 2 , new Date(117, 3, 01), "Hilton", "LA");
-    Room room2 = new Room(2, 100, 2 , new Date(117, 4, 10), "Hilton", "NY");
-    Room room3 = new Room(3, 200, 3, new Date(117, 3, 02), "Inturist", "Minsk");
-    Room room4 = new Room(4, 200, 3, new Date(117, 4, 03), "Marriott", "Minsk");
-    Room room5 = new Room(5, 250, 1, new Date(117, 4, 18), "Hotel", "Kiev");
 
-
-    Room rooms[] = new Room [] {room1, room2, room3, room4, room5};
+    Room [] rooms = new Room [5];
 
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
@@ -44,6 +38,7 @@ public class BookingComAPI implements API {
                     System.out.println(rrr);
                 }
             }
-            else {System.out.println("Такая комната не найдена");}
+            else {System.out.println("В BookingComAPI такая комната не найдена");
+            }
         }
 }
