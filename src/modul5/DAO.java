@@ -6,8 +6,8 @@ public interface DAO {
 
 
 
-    Room save(Room room);
-    boolean delete(Room room);
-    Room update(Room room);
-    Room findById(long id);
+    public Room save(Room []RoomDB, Room room);
+    boolean delete(Room []RoomDB, Room room);
+    Room update(Room []RoomDB, Room room);
+    Room findById(Room []RoomDB, long id);
 }

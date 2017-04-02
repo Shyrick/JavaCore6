@@ -1,31 +1,34 @@
 package modul5;
 
-import java.util.Date;
-
 public class BookingComAPI implements API {
 
-
-    Room [] rooms = new Room [5];
+    public Room [] getDB (){
+        DAORoom daoRoom = new DAORoom();
+        Room [] rooms = new Room [daoRoom.bookingRoomDB.length];
+        rooms = daoRoom.bookingRoomDB;
+        return   rooms;
+    }
 
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
-            Room room [] = new Room[rooms.length];
-            int count = 0;
-        for (int i = 0; i < rooms.length-1; i++) {
-            if (rooms[i].getPrice()==price)
-                if (rooms[i].getPersons()==persons )
-                    if (rooms[i].getCityName()==city)
-                        if (rooms[i].getHotelName()==hotel) {
-                            room[count] = rooms[i];
+        DAORoom daoRoom = new DAORoom();
+        Room temproom [] = new Room[daoRoom.bookingRoomDB.length];
+
+        int count = 0;
+        for (int i = 0; i < daoRoom.bookingRoomDB.length-1; i++) {
+            if (daoRoom.bookingRoomDB[i].getPrice()==price)
+                if (daoRoom.bookingRoomDB[i].getPersons()==persons )
+                    if (daoRoom.bookingRoomDB[i].getCityName()==city)
+                        if (daoRoom.bookingRoomDB[i].getHotelName()==hotel) {
+                            temproom[count] = daoRoom.bookingRoomDB[i];
                             count++;
                         }
         }
-
         Room foundedRooms [] = new Room[count];
         int j=0;
-        for (int i = 0; i < rooms.length-1 ; i++) {
-            if (room [i]!= null)
-                foundedRooms[j]=room[i];
+        for (int i = 0; i < daoRoom.bookingRoomDB.length ; i++) {
+            if (temproom [i]!= null)
+                foundedRooms[j]=temproom[i];
                     j++;
         }
         return  foundedRooms;
