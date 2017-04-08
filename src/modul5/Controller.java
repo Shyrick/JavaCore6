@@ -2,7 +2,9 @@ package modul5;
 
 public class Controller {
 
+
     API apis[] = new API [] {new BookingComAPI(), new GoogleAPI(),new TripAdvisorAPI()};
+
 
     Room[] requstRooms(int price, int persons, String city, String hotel) {
 
@@ -42,7 +44,7 @@ public class Controller {
         int count = 0;
         for (int i = 0; i <api1.getDB().length ; i++) {
             for (int j = 0; j <api2.getDB().length ; j++) {
-                if (api1Rooms[i].equals(api1Rooms[j])){
+                if (api1Rooms[i].equals(api2Rooms[j])){
                     count++;
                 }
             }
@@ -51,7 +53,7 @@ public class Controller {
         int k = 0;
         for (int i = 0; i <api1.getDB().length ; i++) {
             for (int j = 0; j <api2.getDB().length ; j++) {
-                if (api1Rooms[i].equals(api1Rooms[j])){
+                if (api1Rooms[i].equals(api2Rooms[j])){
                     checkedRooms[k] = api1Rooms[i];
                     k++;
                 }
