@@ -1,4 +1,4 @@
-package modul6;
+package modul6.Arrays;
 
 public final class ArraysUtils {
 

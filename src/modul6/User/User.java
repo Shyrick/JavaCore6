@@ -1,4 +1,4 @@
-package modul6;
+package modul6.User;
 
 public final class User {
 
